@@ -1,0 +1,15 @@
+package: .
+import:
+- package: github.com/golang/glog
+- package: github.com/vishvananda/netlink
+  version: ^1.0.0
+- package: golang.org/x/net
+  subpackages:
+  - context
+- package: google.golang.org/grpc
+  version: ^1.18.0
+- package: k8s.io/kubernetes
+  version: ^1.14.0-alpha.1
+  subpackages:
+  - pkg/kubelet/apis/deviceplugin/v1beta1
+  - pkg/kubelet/apis/pluginregistration/v1beta1
