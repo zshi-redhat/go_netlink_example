@@ -24,19 +24,19 @@ func main() {
 
 	ifName := *ifNamePtr
 
-	glog.Info("Input ifName: %v", ifName)
+	glog.Info("Input ifName: ", ifName)
 	vfDev, err := netlink.LinkByName(ifName)
 	if err != nil {
 		glog.Errorf("failed to lookup vf device %q: %v", ifName, err)
 		return
 	}
-	glog.Info("netlink.LinkByName vfDev: %v", vfDev)
+	glog.Info("netlink.LinkByName vfDev: ", vfDev)
 
 	index := vfDev.Attrs().Index
-	glog.Info("vfDev.Attrs().Index: %v", index)
+	glog.Info("vfDev.Attrs().Index: ", index)
 
 	devName := fmt.Sprintf("dev%d", index)
-	glog.Info("fmt.Sprintf devName: %v", devName)
+	glog.Info("fmt.Sprintf devName: ", devName)
 
 	if err = netlink.LinkSetDown(vfDev); err != nil {
 		glog.Errorf("failed to down vf device %q: %v", ifName, err)
