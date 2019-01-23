@@ -17,7 +17,7 @@ func renameLink(curName, newName string) error {
 }
 
 func main() {
-	ifNamePtr := flag.String("-interface", "eth0", "a kernel interface name to be renamed")
+	ifNamePtr := flag.String("interface", "eth0", "a kernel interface name to be renamed")
 	flag.Parse()
 	defer glog.Flush()
 	glog.Infof("Starting example...")
