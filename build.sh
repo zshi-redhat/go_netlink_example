@@ -24,5 +24,6 @@ export GOBIN=${PWD}/bin
 
 echo "Building go netlink examples"
 $GO install "$@" ${REPO_PATH}/examples/rename
+$GO install "$@" ${REPO_PATH}/examples/device_index
 
 echo "Done!"
